@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.covidsymptom.api;
+package org.openmrs.module.covidsymptom;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.openmrs.User;
 import org.openmrs.api.UserService;
-import org.openmrs.module.covidsymptom.Item;
+// import org.openmrs.module.covidsymptom.Item;
 import org.openmrs.module.covidsymptom.api.dao.CovidsymptomDao;
 import org.openmrs.module.covidsymptom.api.impl.CovidsymptomServiceImpl;
 import static org.mockito.Mockito.*;
