@@ -1,18 +1,9 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License,
- * v. 2.0. If a copy of the MPL was not distributed with this file, You can
- * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
- * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
- *
- * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
- * graphic logo is a trademark of OpenMRS Inc.
- */
 package org.openmrs.module.covidsymptom.api.impl;
 
-import org.openmrs.api.APIException;
+import java.util.List;
 import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
-import org.openmrs.module.covidsymptom.Item;
+import org.openmrs.module.covidsymptom.Covidsymptom;
 import org.openmrs.module.covidsymptom.api.CovidsymptomService;
 import org.openmrs.module.covidsymptom.api.dao.CovidsymptomDao;
 
@@ -29,24 +20,24 @@ public class CovidsymptomServiceImpl extends BaseOpenmrsService implements Covid
 		this.dao = dao;
 	}
 	
-	/**
-	 * Injected in moduleApplicationContext.xml
-	 */
-	public void setUserService(UserService userService) {
-		this.userService = userService;
+	@Override
+	public List<Covidsymptom> getAllSymptoms() {
+		return dao.getAllSymptoms();
 	}
 	
 	@Override
-	public Item getItemByUuid(String uuid) throws APIException {
-		return dao.getItemByUuid(uuid);
+	public Covidsymptom getSymptom(Integer symptomId) {
+		return dao.getSymptom(symptomId);
 	}
 	
 	@Override
-	public Item saveItem(Item item) throws APIException {
-		if (item.getOwner() == null) {
-			item.setOwner(userService.getUser(1));
-		}
-		
-		return dao.saveItem(item);
+	public Covidsymptom saveSymptom(Covidsymptom symptom) {
+		return dao.saveSymptom(symptom);
 	}
+	
+	@Override
+	public void purgeSymptom(Covidsymptom symptom) {
+		dao.purgeSymptom(symptom);
+	}
+	
 }

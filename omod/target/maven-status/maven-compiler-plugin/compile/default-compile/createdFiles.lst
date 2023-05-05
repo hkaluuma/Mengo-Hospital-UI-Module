@@ -1,0 +1,2 @@
+org\openmrs\module\covidsymptom\extension\html\AdminList.class
+org\openmrs\module\covidsymptom\web\controller\CovidsymptomController.class

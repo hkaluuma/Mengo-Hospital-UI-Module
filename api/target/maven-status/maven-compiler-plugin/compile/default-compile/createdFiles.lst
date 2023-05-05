@@ -1,6 +1,8 @@
-org\openmrs\module\covidsymptom\api\CovidsymptomService.class
 org\openmrs\module\covidsymptom\CovidsymptomActivator.class
 org\openmrs\module\covidsymptom\CovidsymptomConfig.class
+org\openmrs\module\covidsymptom\api\dao\CovidsymptomDaoImpl.class
+org\openmrs\module\covidsymptom\Covidsymptom.class
+org\openmrs\module\covidsymptom\api\impl\CovidsymptomServiceImpl.class
+org\openmrs\module\covidsymptom\api\CovidsymptomService.class
 org\openmrs\module\covidsymptom\Item.class
 org\openmrs\module\covidsymptom\api\dao\CovidsymptomDao.class
-org\openmrs\module\covidsymptom\api\impl\CovidsymptomServiceImpl.class
